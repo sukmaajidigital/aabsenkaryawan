@@ -1,4 +1,69 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Cara Instalasi
+
+1. **Clone repository** (jika belum):
+
+    ```bash
+    git clone <repo-url>
+    cd aabsenkaryawan
+    ```
+
+2. **Copy file environment**
+
+    ```bash
+    cp .env.example .env
+    ```
+
+3. **Install dependencies PHP**
+
+    ```bash
+    composer install
+    ```
+
+4. **Install dependencies frontend & build**
+
+    ```bash
+    npm install
+    npm run build
+    ```
+
+5. **Generate application key**
+
+    ```bash
+    php artisan key:generate
+    ```
+
+6. **Konfigurasi database**
+    - Edit file `.env` dan sesuaikan pengaturan database (`DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`).
+
+7. **Import database**
+    - Buat database baru di MySQL/MariaDB, misal: `laravelabsen`.
+    - Import file `laravelabsen.sql` ke database tersebut:
+        ```bash
+        mysql -u <username> -p <nama_database> < laravelabsen.sql
+        ```
+
+8. **Storage link**
+
+    ```bash
+    php artisan storage:link
+    ```
+
+9. **Jalankan server lokal**
+
+    ```bash
+    php artisan serve
+    ```
+
+10. **Akses aplikasi**
+    - Buka browser ke `http://localhost:8000`
+
+**Catatan:**
+
+- Pastikan sudah menginstall PHP, Composer, Node.js, dan npm.
+- Untuk user awal login:
+    - Email: `superadmin@gmail.com`
+    - Password: (lihat di database, hash default)
+      <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
